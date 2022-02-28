@@ -37,7 +37,6 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_quiz);
 
         person = Database.getInstance().getPeople();
-
         initQuiz();
 
         final Button endQuizBtn = findViewById(R.id.endQuizBtn);
@@ -70,6 +69,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             // Set Alternative A
             ans = person.get(a).getName();
             while (ans.equals(previousAns)) {
+                // Check if the person was the answer to the previous question, if yes, find a new person.
                 a = rand.nextInt(person.size());
                 ans = person.get(a).getName();
             }
