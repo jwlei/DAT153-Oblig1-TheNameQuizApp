@@ -3,7 +3,5 @@
 Authors: 
 
 jwlei
-
 finleif
-
 pofurre
